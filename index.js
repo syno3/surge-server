@@ -23,7 +23,8 @@ mongoose.connect('mongodb+srv://festus_api:VH1BIolzr8BS6tqj@cluster0.loydg.mongo
 
 
 /* create server at port 9000 */
-app.listen(9000, ()=>{
+const port = process.env.PORT || 9000
+app.listen(port, ()=>{
 	console.log("server listening at port 9000")
 })
 
