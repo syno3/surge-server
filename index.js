@@ -17,7 +17,7 @@ app.use(cors());
 
 
 /* connecting to mongodb */
-mongoose.connect('mongodb+srv://festus_api:VH1BIolzr8BS6tqj@cluster0.loydg.mongodb.net/driverx?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URL, {
 	useNewUrlParser: true,
 }, error => error ? console.log(error) : console.log('connected to mongoogse'));
 
